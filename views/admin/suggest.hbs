@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="/css/admin.css">
+
+{{> adminSidebarMobile}}
+<div class="main d-flex">
+    {{> adminSidebar}}
+    <div class="bg-white container3 px-3 py-1">
+        <div>
+            <div class="admin-forms">
+                <h4>Add/Change video within an item</h4>
+                <form action="/admin/suggest" method="POST">
+                    <div class="form-group">
+                        <label for="">Category</label>
+                        <select name="category" id="">
+                            <option value="gaming">Gaming</option>
+                            <option value="travel">Travelling</option>
+                            <option value="health">Health</option>
+                            <option value="khana">Khana Khazana</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Subcategory</label>
+                        <input type="text" name="subcategory">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Add Videos</label>
+                        <div class="admin-videoBlock">
+                            <input type="text" name="url1" placeholder="Enter URL">
+                            <input type="text" placeholder="Enter related tag" name="v1t1">
+                            <input type="text" placeholder="Enter related tag" name="v1t2">
+                            {{!-- <a href="">Edit</a> --}}
+                        </div>
+                        <div class="admin-videoBlock">
+                            <input type="text" name="url2" placeholder="Enter URL">
+                            <input type="text" placeholder="Enter related tag" name="v2t1">
+                            <input type="text" placeholder="Enter related tag" name="v2t2">
+                            {{!-- <a href="">Edit</a> --}}
+                        </div>
+                        <div class="admin-videoBlock">
+                            <input type="text" name="url3" placeholder="Enter URL">
+                            <input type="text" placeholder="Enter related tag" name="v3t1">
+                            <input type="text" placeholder="Enter related tag" name="v3t2">
+                            {{!-- <a href="">Edit</a> --}}
+                        </div>
+                        <div class="form-group btn">
+                            <button type="submit">Submit</button>
+                        </div>
+                        {{#if successMessage}}
+                        <div class="form-group">
+                            <p class="success">{{successMessage}}</p>
+                        </div>
+                        {{/if}}
+                    </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,33 @@
+<div class="bg-white container1  sidebar">
+    <div class="sidebar-wrapper" style="padding-left:40px; padding-top:20px ;">
+        <div class="sidebar-category-tab">
+            {{!-- <h3>Feed</h3> --}}
+            <li> <i class=" fas fa-user-friends"></i> <a href="/" class="{{#if active.home}}active{{/if}}">Feed</a>
+            </li>
+            <li><i class="fas fa-football-ball"></i> <a href="?category=sports"
+                    class="{{#if active.home}}active{{/if}}">Sports</a></li>
+            <li><i class="fas fa-leaf"></i> <a href="?category=botany"
+                    class="{{#if active.home}}active{{/if}}">Botany</a>
+            </li>
+            <li><i class="fas fa-fist-raised"></i> <a href="?category=politics"
+                    class="{{#if active.home}}active{{/if}}">Politics</a></li>
+            <li><i class="fas fa-landmark"></i> <a href="?category=civil"
+                    class="{{#if active.home}}active{{/if}}">Civil</a>
+            </li>
+        </div>
+
+        <div>
+
+            <p style="color: blue; font-weight: bold;"> <i class="fas fa-hashtag"></i> Tags</p>
+            <div>
+                <a href="/tags/c++">c++</a>
+            </div>
+            <div>
+                <a href="/tags/proramming">programimg</a>
+            </div>
+            <div>
+            </div>
+            <a style="color: brown;" href="/tags">View All</a>
+        </div>
+    </div>
+</div>

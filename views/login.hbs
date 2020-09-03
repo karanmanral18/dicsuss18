@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="/css/auth.css">
+<link rel="stylesheet" href="/css/ex.css">
+
+
+<div class="login-page">
+    <div class="login-form">
+        <div class="form-block">
+            <div class="form-group header">
+                <h2 style="font-weight: bolder;">Login to Your Account</h2>
+            </div>
+            <div class="form-group">
+                <div class="social-login">
+                    <a href="/auth/google">Login via <i class="fab fa-google"></i></a>
+                    <a href="/auth/facebook">Login via <i class="fab fa-facebook"></i></a>
+                    <a href="/auth/linkedin">Login via <i class="fab fa-linkedin-in"></i></a>
+                    <a href="/auth/twitter">Login via <i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="form-group">
+                <p style="text-align: center; color:grey;">- OR -</p>
+            </div>
+
+            <form id="loginForm" action="/login" method="POST">
+                {{#if errorMessage}}
+                <div class="form-group">
+                    <p class="error">{{errorMessage}}</p>
+                </div>
+                {{/if}}
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input placeholder="deanambrows@gmail.com" name="email" id="loginEmail" type="email">
+                    <span id="login-email-error">Message</span>
+                </div>
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input placeholder="Enter password" name="password" id="loginPassword" type="password">
+                    <span id="login-password-error">Message</span>
+                    <div class="login-forgot-pass">
+                        <a href="">Forgot Password</a>
+                    </div>
+                </div>
+                <div class="form-group button submit-button">
+                    <button id="3" type="submit">Login to Your Account</button>
+                </div>
+                <div class="form-group ">
+                    <p style="color: grey; text-align: center;">Don't have account ? <strong><a
+                                href="/signup">Signup</a></strong></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="/js/validate/validators.js"></script>
+<script src="/js/validate/login.js"></script>

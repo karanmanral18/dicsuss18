@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="/css/admin.css">
+{{!-- {{> adminSidebarMobile}} --}}
+<div class="main d-flex">
+    {{> adminSidebar}}
+    <div class="admin-block">
+        <div class="admin-forms">
+            <form action="/admin/profile" method="POST">
+                <div class="form-group">
+                    <label>Email</label>
+                    <strong style="display: flex; justify-content: space-between;">
+                        <p>{{user.email}}</p>
+                        {{#if successMessage}}
+                        <p class="success">{{successMessage}}</p>
+                        {{/if}}
+                    </strong>
+                </div>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input name="name" value="{{user.name}}" type=" text">
+                </div>
+                <div class="form-group">
+                    <label>Mobile</label>
+                    <input name="mobile" value="{{user.mobile}}" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="">Location</label>
+                    <input name="location" value="{{user.location}}" type="text">
+                </div>
+                <div class="form-group">
+                    <label>Langauge</label>
+                    <input name="language" value="{{user.language}}" type="text">
+                </div>
+                {{!-- <div class="form-group">
+                    <label>Interests</label>
+                    <input name="interests" type="text">
+                </div> --}}
+                <div class="form-group">
+                    <button type="submit">Save</button>
+                </div>
+            </form>
+            <form action="/admin/profile/addPhoto" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <img src="{{user.imageUrl}}" alt="image">
+                </div>
+                <div class="form-group">
+                    <input type="file" name="image" id="image">
+                </div>
+                <div class="form-group">
+                    <button type="submit">Upload</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

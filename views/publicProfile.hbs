@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="/css/admin.css">
+<div class="main d-flex">
+    {{> sidebar}}
+    <div class="bg-white container3 px-3 py-1">
+        <div>
+            <div class=" public-block">
+                <div class="">
+                    <div class="form-group">
+                        <img src="{{user.imageUrl}}" alt="image">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <strong style="display: flex; justify-content: space-between;">
+                            <p>{{user.email}}</p>
+                            {{#if successMessage}}
+                            <p class="success">{{successMessage}}</p>
+                            {{/if}}
+                        </strong>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Name</label>
+                        <strong style="display: flex; justify-content: space-between;">
+                            <p>{{user.name}}</p>
+                        </strong>
+                    </div>
+
+                    {{#if user.mobile}}
+                    <div class="form-group">
+                        <label>Mobile</label>
+                        <strong style="display: flex; justify-content: space-between;">
+                            <p>{{user.mobile}}</p>
+                        </strong>
+                    </div>
+                    {{/if}}
+
+                    {{#if user.location}}
+                    <div class="form-group">
+                        <label for="">Location</label>
+                        <strong style="display: flex; justify-content: space-between;">
+                            <p>{{user.location}}</p>
+                        </strong>
+                    </div>
+                    {{/if}}
+                    {{#if user.language}}
+                    <div class="form-group">
+                        <label>Langauge</label>
+                        <strong style="display: flex; justify-content: space-between;">
+                            <p>{{user.language}}</p>
+                        </strong>
+                    </div>
+                    {{/if}}
+                    <div class="form-group">
+                        <a style=" color: blue" href="/public/profile/questions/{{user._id}}">View
+                            Questions by {{user.name}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

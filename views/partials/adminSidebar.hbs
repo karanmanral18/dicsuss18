@@ -1,0 +1,14 @@
+<div class="bg-white container1  sidebar">
+    <div class="as" style="padding:40px; padding-top:20px; height: 100%;">
+        <li><a href="/admin/profile" class="{{#if active.profile}}active{{/if}}">Profile</a></li>
+        <li><a href="/admin/posts" class="{{#if active.myposts}}active{{/if}}">Questions</a></li>
+        <li><a href="/admin/add" class="{{#if active.add}}active{{/if}}">Add Post</a></li>
+        <li><a href="/follow/posts" class="{{#if active.follow}}active{{/if}}">Followed</a></li>
+        <form action="/logout" method="GET">
+            <li class="nav-item">
+                {{!-- <a class="nav-link text-white" href="/logout">Logout</a> --}}
+                <button class="nav-link" type="submit">Logout</button>
+            </li>
+        </form>
+    </div>
+</div>
